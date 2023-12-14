@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script async defer src="timer.js"></script>
+  <script async defer src="main.js"></script>
+</head>
+
+<body>
+  <div id="timer-section">
+    <div id="menu">
+      <h3 id="standard-button">Standard</h3>
+      <h3 id="pressure-button">Pressure</h3>
+      <h3 id="hotpotato-button">Hot Potato</h3>
+    </div>
+    <hr>
+
+    <div id="timer-page">
+      <div id="timer">
+        <svg>
+          <circle cx="10vw" cy="10vw" r="8vw" id="track"></circle>
+          <circle cx="10vw" cy="10vw" r="8vw" id="progress"></circle>
+        </svg>
+        <div id="logo-container">
+          <img id="logo" src="assets/logo.png">
+        </div>
+      </div>
+
+      <h2 id="time">00:00</h2>
+    </div>
+
+    <div id="standard-page">
+      <div id="standard-page-menu">
+        <h3>10s</h3>
+        <h3>20s</h3>
+        <h3>30s</h3>
+      </div>
+    </div>
+
+    <div id="hotpotato-page">
+      <div id="hotpotato-page-menu">
+        <h3>1m</h3>
+        <h3>2m</h3>
+        <h3>3m</h3>
+        <h3>4m</h3>
+        <h3>5m</h3>
+      </div>
+    </div>
+
+    <hr>
+    <div id="options-container">
+      <div id="options">
+        <h3 id="play-button">Play</h3>
+        <h3 id="reset-button">Reset</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

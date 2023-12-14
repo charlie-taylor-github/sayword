@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  cursor: pointer;
+}
+
+h3:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  #timer-section {
+    margin: 5vw 30vw 0 30vw;
+  }
+  
+}
+
+/* TIMER */
+#timer {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  margin: auto;
+}
+
+svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+circle#track {
+  fill: none;
+  stroke: #425572;
+  stroke-width: 1vw;
+}
+
+circle#progress {
+  fill: none;
+  stroke: #FE8F1A;
+  stroke-width: 1vw;
+}
+
+#logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  overflow: hidden;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+
+/* MENU */
+#menu, #options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}
+
+#menu > h3 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+#options > h3 {
+  font-size: 3vw;
+}
+
+#time {
+  font-size: 5vw;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+@media (min-width: 600px) {
+  #menu > h3 {
+    font-size: 2vw;
+  }
+
+  #options > h3 {
+    font-size: 1.5vw;
+  }
+
+  #time {
+    font-size: 3vw;
+  }
+}
+
+
+/* PAGES */
+#standard-page-menu, #hotpotato-page-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 5%;
+}
+
+#standard-page-menu > h3, #hotpotato-page-menu > h3 {
+  text-align: center;
+  font-size: 5vw;
+}
+
+@media (min-width: 600px) {
+  #standard-page-menu > h3, #hotpotato-page-menu > h3 {
+    font-size: 2vw;
+  }
+}
