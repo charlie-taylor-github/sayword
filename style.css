@@ -14,37 +14,38 @@ h3:hover {
   text-decoration: underline;
 }
 
-@media (min-width: 600px) {
-  #timer-section {
-    margin: 5vw 30vw 0 30vw;
-  }
-  
-}
-
 /* TIMER */
 #timer {
   position: relative;
-  width: 20vw;
-  height: 20vw;
+  width: 80vw;
+  height: auto;
   margin: auto;
+
+  @media (min-width: 600px) {
+    width: 50vw;
+  }
+
+  @media (min-width: 1000px) {
+    width: 30vw;
+  }
 }
 
 svg {
   transform: rotate(-90deg);
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 circle#track {
   fill: none;
   stroke: #425572;
-  stroke-width: 1vw;
+  stroke-width: 5%;
 }
 
 circle#progress {
   fill: none;
   stroke: #FE8F1A;
-  stroke-width: 1vw;
+  stroke-width: 5%;
 }
 
 #logo-container {
@@ -68,22 +69,40 @@ circle#progress {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1vw;
-  margin-top: 1vw;
+  margin-top: 3vw;
 }
 
 #menu > h3 {
-  font-size: 4vw;
+  font-size: 6vw;
   text-align: center;
+
+  @media (min-width: 1000px) {
+    font-size: 4vw;
+  }
 }
 
 #options > h3 {
-  font-size: 3vw;
+  font-size: 5vw;
+  text-align: center;
+  background-color: blue;
+  padding: 1%;
+  border-radius: 5px;
+  color: white;
+  width: 20%;
+
+  @media (min-width: 1000px) {
+    font-size: 3vw;
+  }
 }
 
 #time {
-  font-size: 5vw;
+  font-size: 10vw;
   text-align: center;
   margin-bottom: 2vw;
+
+  @media (min-width: 1000px) {
+    font-size: 5vw;
+  }
 }
 
 @media (min-width: 600px) {

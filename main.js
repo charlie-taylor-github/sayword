@@ -96,6 +96,10 @@ function init() {
         timer.reset();
         timer.start();
       }
+
+      if (!timer.active) {
+        timer.start();
+      }
     });
   }
 
