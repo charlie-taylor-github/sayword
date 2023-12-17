@@ -10,14 +10,6 @@ const pages = [
   {
     name: 'timer',
     page: document.querySelector('#timer-page')
-  },
-  {
-    name: 'standard',
-    page: document.querySelector('#standard-page')
-  },
-  {
-    name: 'hotpotato',
-    page: document.querySelector('#hotpotato-page')
   }
 ];
 
