@@ -21,8 +21,8 @@ const pages = [
   }
 ];
 
-let currentPage = 'standard';
-let currentMode = 'standard';
+let currentPage = null;
+let currentMode = null;
 let timer = null;
 
 function update() {
@@ -32,7 +32,7 @@ function update() {
     if (mode === currentMode) {
       document.querySelector(`#${mode}-button`).style.color = '#FE8F1A';
     } else {
-      document.querySelector(`#${mode}-button`).style.color = 'black';
+      document.querySelector(`#${mode}-button`).style.color = 'white';
     }
   }
 
@@ -50,37 +50,17 @@ function update() {
 }
 
 function init() {
-  const standardPageButtons = document.querySelectorAll('#standard-page-menu > h3');
-  for (const btn of standardPageButtons) {
-    btn.addEventListener('click', e => {
-      const text = e.target.innerText;
-      const totalTime = Number(text[0] + text[1]);
-      setStandardPage(totalTime);
-    });
-  }
-
-  const hotpotatoPageButtons = document.querySelectorAll('#hotpotato-page-menu > h3');
-  for (const btn of hotpotatoPageButtons) {
-    btn.addEventListener('click', e => {
-      const text = e.target.innerText;
-      const totalTime = Number(text[0]) * 60;
-      setHotpotatoPage(totalTime);
-    });
-  }
-
   const menuButtons = document.querySelectorAll('#menu > h3');
   for (const btn of menuButtons) {
     btn.addEventListener('click', e => {
       if (e.target.id === 'standard-button') {
-        currentPage = 'standard';
-        currentMode = 'standard';
+        setStandardPage();
       }
       if (e.target.id === 'pressure-button') {
         setPressurePage();
       }
       if (e.target.id === 'hotpotato-button') {
-        currentPage = 'hotpotato';
-        currentMode = 'hotpotato';
+        setHotpotatoPage();
       }
     });
 
@@ -118,6 +98,8 @@ function init() {
         }
       }
     });
+
+    setStandardPage();
   }
 
   setInterval(update, interval);
@@ -125,11 +107,11 @@ function init() {
 
 
 // RANDOM FUNCTIONS
-function setStandardPage(totalTime) {
+function setStandardPage() {
   currentPage = 'timer';
   currentMode = 'standard';
   timer = new Timer(timerElement, onStop);
-  timer.setTime(totalTime * 1000);
+  timer.setTime(20 * 1000);
   timer.reset();
 }
 
@@ -141,11 +123,11 @@ function setPressurePage() {
   timer.reset();
 }
 
-function setHotpotatoPage(totalTime) {
+function setHotpotatoPage() {
   currentPage = 'timer';
   currentMode = 'hotpotato';
   timer = new Timer(timerElement, onStop);
-  timer.setTime(totalTime * 1000);
+  timer.setTime(2 * 60 * 1000);
   timer.reset();
 }
 
