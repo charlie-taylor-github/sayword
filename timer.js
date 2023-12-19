@@ -10,6 +10,7 @@ class Timer {
     this.time = 0;
     this.progress = 0;
     this.active = false;
+    this.complete = false;
   }
 
   start() {
@@ -21,6 +22,7 @@ class Timer {
   }
 
   reset() {
+    this.complete = false;
     this.active = false;
     this.time = 0;
     this.progress = 0;
@@ -42,8 +44,10 @@ class Timer {
     let progress = this.time / this.totalTime;
     if (progress < 0) progress = 0;
     if (progress >= 1 || this.totalTime <= 0) {
+      this.stop();
       this.onStop();
-      this.reset();
+      this.complete = true;
+      // this.reset();
       return;
     }
     const progressCircumference = this.circumference * progress;

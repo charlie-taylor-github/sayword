@@ -59,17 +59,17 @@ function init() {
     const timerHitbox = document.querySelector('#timer');
     timerHitbox.addEventListener('click', e => {
       e.stopImmediatePropagation()
-      if (currentMode === 'standard' && timer.active) {
+      if (currentMode === 'standard' && timer.active && !timer.complete) {
         timer.reset();
         timer.start();
       }
-      if (currentMode === 'pressure' && timer.active) {
+      if (currentMode === 'pressure' && timer.active && !timer.complete) {
         timer.setTime(timer.totalTime - 1000);
         timer.reset();
         timer.start();
       }
 
-      if (!timer.active) {
+      if (!timer.active && !timer.complete) {
         timer.start();
       }
     });
@@ -80,7 +80,7 @@ function init() {
     btn.addEventListener('click', e => {
       if (e.target.id === 'play-button') {
         if (timer.active) timer.stop();
-        else timer.start();
+        else if (!timer.complete) timer.start();
       }
       if (e.target.id === 'reset-button') {
         if (currentMode === 'pressure') {
