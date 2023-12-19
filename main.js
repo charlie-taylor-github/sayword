@@ -1,4 +1,4 @@
-const fps = 100;
+const fps = 50;
 const interval = 1000 / fps;
 
 const timerElement = document.querySelector('circle#progress');
