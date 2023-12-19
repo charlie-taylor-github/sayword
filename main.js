@@ -35,7 +35,8 @@ function update() {
       document.querySelector('#play-button').innerText = 'PAUSE';
       updateTimerText(timer.totalTime - timer.time);
     } else {
-      if (timer.progress <= 0 || timer.progress >= 1) {
+      console.log(timer)
+      if (timer.time == 0) {
         document.querySelector('#play-button').innerText = 'PLAY';
       } else {
         document.querySelector('#play-button').innerText = 'RESUME';
