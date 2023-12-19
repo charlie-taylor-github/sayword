@@ -32,10 +32,10 @@ function update() {
     timer.update(interval);
 
     if (timer.active) {
-      document.querySelector('#play-button').innerText = 'Pause';
+      document.querySelector('#play-button').innerText = 'PAUSE';
       updateTimerText(timer.totalTime - timer.time);
     } else {
-      document.querySelector('#play-button').innerText = 'Play';
+      document.querySelector('#play-button').innerText = 'PLAY';
       if (timer.innerText != `time's up`) updateTimerText(timer.totalTime - timer.time);
     }
   }
