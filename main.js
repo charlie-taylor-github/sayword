@@ -35,7 +35,7 @@ function update() {
       document.querySelector('#play-button').innerText = 'PAUSE';
       updateTimerText(timer.totalTime - timer.time);
     } else {
-      document.querySelector('#play-button').innerText = 'PLAY';
+      document.querySelector('#play-button').innerText = 'RESUME';
       if (timer.innerText != `time's up`) updateTimerText(timer.totalTime - timer.time);
     }
   }
