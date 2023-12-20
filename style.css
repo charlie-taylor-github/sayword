@@ -94,6 +94,11 @@ circle#progress {
   }
 }
 
+#options > h3 {
+  flex: 1;
+  margin: 0 10vw;
+}
+
 #time {
   font-family: monospace;
   font-weight: 200;
